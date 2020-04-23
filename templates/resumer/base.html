@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% load static %}
+	<head>
+		<meta charset="utf-8" />
+		<title>{{title}} | {{caption}}</title>
+
+		<meta property="og:image" content="images/og.png" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+
+		<meta name="theme-color" content="#4285f4">
+
+		<meta name="msapplication-navbutton-color" content="#4285f4">
+
+		<meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/workerstyle.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/media-queries.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/sweet-alert.css' %}" />
+		<script type="text/javascript" src="{% static 'js/sweet-alert.min.js' %}"></script>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}" />
+		<link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}" />
+		<link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}" />
+		<link rel="manifest" href="{% static 'images/site.webmanifest' %}" />
+	</head>
+	<body>
+		<div class="loader"></div>
+
+		<header id="home">
+			<nav id="nav-wrap">
+                <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+                <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+                <ul id="nav" class="nav">
+                    <li class="current">
+                        <a class="smoothscroll" href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a class="smoothscroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="smoothscroll" href="#experiance">Experiance</a>
+                    </li>
+                    <li>
+                        <a class="smoothscroll" href="#education" title="education">Education</a>
+                    </li>
+                    <li>
+                        <a class="smoothscroll" href="#skills" title="Skills">Skills</a>
+                    </li>
+                    <li>
+                        <a class="smoothscroll" href="#portfolio">Works</a>
+                    </li>
+                    <li>
+                        <a class="smoothscroll" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li>
+                        <a class="smoothscroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        {% block content %}
+
+        {% endblock %}
+        <footer>
+			<div><!--Waves Container-->
+				<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+					<defs>
+						<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+					</defs>
+					<g class="parallax">
+						<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+						<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+						<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+						<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+					</g>
+				</svg>
+			</div><!--Waves end-->
+			<div id="cust">
+				<ul class="social-links">
+					<li>
+						<a href="https://www.facebook.com/AbdulRahimIbnUbaidulla"><i class="fa fa-facebook"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-skype"></i></a>
+					</li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Copyright 2020 AbdulRahim</li>
+					<li>Design by <a title="Styleshout" href="##">www.notebook.com</a></li>
+				</ul>
+				<div id="go-top">
+					<a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript" src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery.flexslider.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/waypoints.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/magnific-popup.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/init.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/typed.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/scriptpre.js' %}"></script>
+
+	</body>
+</html>

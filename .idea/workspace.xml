@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="43657c92-61d7-423f-aeb1-4f649b8440b7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1avUJAPzZKtT1dpqnYXS26pfLig" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="625" y="331" width="660" height="452" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587619529501">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="625" y="331" width="660" height="452" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1587619529501" />
+    <state x="720" y="317" key="FileChooserDialogImpl" timestamp="1587615540422">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="720" y="317" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587615540422" />
+    <state x="441" y="188" width="1027" height="738" key="SettingsEditor" timestamp="1587615559871">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="441" y="188" width="1027" height="738" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1587615559871" />
+  </component>
+</project>

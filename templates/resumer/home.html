@@ -1,0 +1,281 @@
+{% extends 'resumer/base.html' %}
+{% load static %}
+{% block content %}
+			<div class="row banner">
+				<div class="banner-text">
+					<h1 class="responsive-headline">I'm <span class="typed"></span></h1>
+					<h3>I'm a Kerala based <span>Web developer</span>, <span>illustrator</span>, and <span>web designer</span> creating awesome and effective visual identities for companies of all sizes around the globe. Let's <a class="smoothscroll" href="#about">start scrolling</a> and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
+					<hr />
+					<ul class="social">
+						<li>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-linkedin"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-skype"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<p class="scrolldown">
+				<a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+			</p>
+		</header>
+
+		<section id="about">
+			<div class="row">
+				{% if about %}
+					{% for data in about %}
+						<div class="three columns">
+							<img class="profile-pic"  src="{{data.images.url}}" alt="" />
+						</div>
+						<div class="nine columns main-col">
+							<h2>{{data.title_one}}</h2>
+							<p>{{data.content_one}}</p><br />
+							<h6>{{data.title_two}}</h6>
+							{% if li_title_two %}
+								<ul class="disc">
+									{% for title_twoli in li_title_two %}
+										<li>{{title_twoli.li_data}}</li>
+									{% endfor %}
+								</ul>
+							{% else %}
+								<p>No Data Found!</p>
+							{% endif %} <br />
+							<h6>{{data.title_three}}</h6>
+							{% if li_title_three %}
+								<ul class="disc">
+									{% for title_threeli in li_title_three %}
+										<li>{{title_threeli.li_data}}</li>
+									{% endfor %}
+								</ul>
+							{% else %}
+								<p>No Data Found!</p>
+							{% endif %} <br />
+							<p>{{data.content_two}}<br /> {{data.content_three}}</p><br />
+							<div class="row">
+								<div class="columns contact-details">
+									<h2>{{data.title_four}}</h2>
+									{% if li_title_four %}
+										<p class="address">
+											{% for title_forli in li_title_four %}
+												<span>{{title_forli.li_data}}</span><br />
+											{% endfor %}
+										</p>
+									{% else %}
+										<p>No Data Found!</p>
+									{% endif %}
+								</div>
+								<div class="columns download">
+									<p>
+										<a href="#" class="button"><i class="fa fa-download"></i>Download Resume</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% else %}
+					<p>No Data Found!</p>
+				{% endif %}
+			</div>
+		</section>
+
+        <section id="experiance">
+			<div class="row work">
+				{% if experiences %}
+					{% for exp_sec in experiences %}
+						<div class="three columns header-col">
+							{% if forloop.first %}
+								<h1><span>{{exp_sec.section}}</span></h1>
+							{% endif %}
+						</div>
+						<div class="nine columns main-col">
+							<div class="row item">
+								<div class="twelve columns">
+									<h3><a href="{{exp_sec.link_text}}" title="{{exp_sec.heading}}">{{exp_sec.heading}}</a></h3>
+									<p class="info">{{exp_sec.sub_head}}<span>&bull;</span>
+										<em class="date">{{exp_sec.date_from}} - {{exp_sec.date_to}}</em>
+									</p>
+									<p>{{exp_sec.story}} <br /> {{exp_sec.story_sub}}</p>
+								</div>
+							</div> <!-- item end -->
+						</div>
+					{% endfor %}
+				{% else %}
+					<p>No Data Found!</p>
+				{% endif %}
+			</div>	<!-- *** END EXPERIANCE ROW *** -->
+		</section>
+
+        <section id="education">
+			<div class="row education">
+				{% if educations %}
+					{% for edu_sec in educations %}
+						<div class="three columns header-col">
+							{% if forloop.first %}
+								<h1><span>{{edu_sec.section}}</span></h1>
+							{% endif %}
+						</div>
+						<div class="nine columns main-col">
+							<div class="row item">
+								<div class="twelve columns">
+									<h3><a href="{{edu_sec.link_text}}" title="{{edu_sec.heading}}">{{edu_sec.heading}}</a></h3>
+									<p class="info">{{edu_sec.sub_head}}<span>&bull;</span>
+										<em class="date">{{edu_sec.date_from}} - {{edu_sec.date_to}}</em>
+									</p>
+									<p>{{edu_sec.story}} <br /> {{edu_sec.story_sub}}</p>
+								</div>
+							</div> <!-- item end -->
+						</div>
+					{% endfor %}
+				{% else %}
+					<p>No Data Found!</p>
+				{% endif %}
+			</div>	<!-- *** END EDUCATION ROW *** -->
+		</section>
+
+        <section id="skills">
+			<div class="row skill">
+				<div class="three columns header-col">
+					<h1><span>Skills</span></h1>
+				</div>
+				<div class="nine columns main-col">
+					<p>This show's my knowledge skill in Programmings</p>
+					<div class="bars">
+						<ul class="skills">
+							<li><span class="bar-expand html"></span><em>Html</em></li>
+							<li><span class="bar-expand css"></span><em>CSS</em></li>
+							<li><span class="bar-expand jquery"></span><em>jQuery</em></li>
+							<li><span class="bar-expand java-script"></span><em>Javascript</em></li>
+							<li><span class="bar-expand wordpress"></span><em>Wordpress</em></li>
+							<li><span class="bar-expand java"></span><em>Java</em></li>
+							<li><span class="bar-expand dotnet"></span><em>.net</em></li>
+							<li><span class="bar-expand swift"></span><em>swift</em></li>
+							<li><span class="bar-expand python"></span><em>python</em></li>
+							<li><span class="bar-expand django"></span><em>django</em></li>
+							<li><span class="bar-expand react-native"></span><em>react-native</em></li>
+							<li><span class="bar-expand mysql"></span><em>Mysql</em></li>
+							<li><span class="bar-expand sqlserver"></span><em>sql server</em></li>
+							<li><span class="bar-expand oracle"></span><em>oracle</em></li>
+							<li><span class="bar-expand postgresql"></span><em>postgresql</em></li>
+							<li><span class="bar-expand netbeans"></span><em>netbeans</em></li>
+							<li><span class="bar-expand eclipse"></span><em>eclipse</em></li>
+							<li><span class="bar-expand visualstudio"></span><em>visual studio</em></li>
+							<li><span class="bar-expand android-studio"></span><em>android studio</em></li>
+							<li><span class="bar-expand terminal"></span><em>terminal</em></li>
+							<li><span class="bar-expand dia"></span><em>dia</em></li>
+							<li><span class="bar-expand ms-office"></span><em>ms-office</em></li>
+							<li><span class="bar-expand ubuntu"></span><em>ubuntu</em></li>
+							<li><span class="bar-expand windows"></span><em>windows</em></li>
+							<li><span class="bar-expand cpanel"></span><em>cpanel</em></li>
+							<li><span class="bar-expand illustrator"></span><em>Illustrator</em></li>
+						</ul>
+					</div>
+				</div>
+			</div>	<!-- *** END SKILLS ROW *** -->
+		</section>
+
+        <section id="portfolio">
+			<div class="row work">
+				<h1>Check Out Some of My Works.</h1>
+				<div class="nine columns main-col">
+					<div class="row item">
+						<div class="twelve columns">
+							<h3>College Management System</h3>
+							<p class="info">Accademic project <span>&bull;</span>
+								<em class="date">2013</em>
+							</p>
+							<p class="error">No Data Found</p>
+						</div>
+					</div> <!-- item end -->
+					<div class="row item">
+						<div class="twelve columns">
+							<h3>Sports Club Management System</h3>
+							<p class="info">Final year university project <span>&bull;</span>
+								<em class="date">2014</em>
+							</p>
+							<p class="error">No Data Found</p>
+						</div>
+					</div> <!-- item end -->
+					<div class="row item">
+						<div class="twelve columns">
+							<h3>Hamash Ventures</h3>
+							<p class="info">Freelance project<span>&bull;</span>
+								<em class="date"> 2016</em>
+							</p>
+							<p class="error">No Data Found</p>
+						</div>
+					</div> <!-- item end -->
+					<div class="row item">
+						<div class="twelve columns">
+							<h3>Sales and Inventory Management System</h3>
+							<p class="info">Personal work <span>&bull;</span>
+								<em class="date"> 2017</em>
+							</p>
+							<p class="error">No Data Found</p>
+						</div>
+					</div> <!-- item end -->
+				</div>
+			</div>
+		</section>
+
+        <section id="testimonials">
+			<div class="row work">
+				<h1>Premium Project Access</h1>
+				<div class="nine columns main-col">
+					<p class="error">No Data Found</p>
+				</div>
+			</div>
+		</section>
+
+        <section id="contact">
+			<div class="row section-head">
+				<div class="two columns header-col">
+					<h1><span>Get In Touch.</span></h1>
+				</div>
+				<div class="ten columns">
+					<h3 class="custin">Get In Touch</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns">
+					<!-- *** FORM *** -->
+					<form class="ajax reload" action="{% url 'portfolio:Contacting' %}" method="POST" enctype="multipart/form-data">
+						{% csrf_token %}
+						<div class="custin">
+							{{contact_form.air_name}}
+						</div>
+						<div class="custin">
+							{{contact_form.air_email}}
+						</div>
+						<div class="custin">
+							{{contact_form.air_phone}}
+						</div>
+						<div class="custin">
+							{{contact_form.air_subject}}
+						</div>
+						<div class="custin">
+							{{contact_form.air_message}}
+						</div>
+						<div class="custin">
+							<button class="submit">Send</button>
+						</div>
+					</form> <!-- *** END FORM *** -->
+				</div>
+			</div>
+		</section>
+{% endblock %}
