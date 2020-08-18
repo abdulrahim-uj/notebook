@@ -2,7 +2,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = ')g*)j__-xi@8vj%#ur3rb=ze_pc#o$buungq)s61a327ysr(6-'
+SECRET_KEY = 'GENERATE KEY'
 
 DEBUG = True
 
@@ -56,7 +56,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'portfoliobook',
         'USER': 'notbokai',
-        'PASSWORD': 'teacher231',
+        'PASSWORD': 'GENERATE LOCKER',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -92,8 +92,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'notebook.register@gmail.com'
-EMAIL_HOST_PASSWORD = 'Teacher)32'
+EMAIL_HOST_USER = 'general.mail@gmail.com'
+EMAIL_HOST_PASSWORD = 'IForgetmypassword'
 
 
 MEDIA_URL = '/media/'
